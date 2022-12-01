@@ -1,0 +1,27 @@
+﻿@using FilmYonetim.Domain.Entities
+@model List<Movies>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/views/shared/layout";
+}
+
+<table class="table" table-bordered>
+    <tr>
+        <th>Film Id</th>
+        <th>Fil Adı</th>
+        <th>Gösterim Yılı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var mov in Model)
+        {
+            <tr>
+                <td>@mov.Id</td>
+                <td>@mov.Name</td>
+                <td>@mov.Date</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
